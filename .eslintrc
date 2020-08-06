@@ -1,0 +1,15 @@
+{
+  "env": {
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["standard", "plugin:sonarjs/recommended"],
+  "plugins": ["sonarjs"],
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prefer-promise-reject-errors": "off"
+  }
+}
