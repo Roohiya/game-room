@@ -37,9 +37,9 @@ io.on('connection', socket => {
   socket.on('joinGame', (data) => {
     const { playerTwoName, roomId } = data
 
-    const roomNum = io.nsps['/'].adapter.rooms[roomId]
+    const rooms = io.nsps['/'].adapter.rooms[roomId]
 
-    if (roomNum && roomNum.length === 1) {
+    if (rooms && rooms.length === 1) {
       socket.join(roomId)
 
       games[roomId].playerTwo = playerTwoName
